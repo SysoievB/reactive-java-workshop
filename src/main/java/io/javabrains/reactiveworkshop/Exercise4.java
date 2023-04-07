@@ -1,5 +1,7 @@
 package io.javabrains.reactiveworkshop;
 
+import reactor.core.publisher.Mono;
+
 import java.io.IOException;
 import java.util.Optional;
 
@@ -13,6 +15,13 @@ public class Exercise4 {
 
         // Print the value from intNumberMono when it emits
         intNumberMono().subscribe(System.out::println);
+
+        Mono<Integer> mono = Mono.just(12);
+        mono.subscribe(
+                value -> System.out.println(value),
+                error -> System.out.println(error.getMessage()),
+                () -> System.out.println("Completed!")
+        );
 
         // Get the value from the Mono into an integer variable
         Integer value = intNumberMono().block();
