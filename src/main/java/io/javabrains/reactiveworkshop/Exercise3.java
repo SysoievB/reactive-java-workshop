@@ -17,6 +17,10 @@ public class Exercise3 {
         List<Integer> listFromFlux = intNumbersFlux()
                 .collectList()//collecting to Mono<List<Integer>>
                 .block();//returns T value from Mono<T>
+
+        //another way
+        List<Integer> list = intNumbersFlux().toStream().toList();
+
         var listSize = Objects.requireNonNull(listFromFlux).size() > 0 ? listFromFlux.size() : -1;
         System.out.println("List size: " + listSize);
         System.out.println("List values: ");
