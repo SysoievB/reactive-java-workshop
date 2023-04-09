@@ -20,5 +20,4 @@ public class Exercise2 {
         System.out.println("Press a key to end");
         System.in.read();
     }
-
 }

@@ -9,14 +9,13 @@ import static io.javabrains.reactiveworkshop.ReactiveSources.unresponsiveMono;
 
 public class Exercise6 {
 
-
     public static void main(String[] args) throws IOException {
 
         // Use ReactiveSources.unresponsiveFlux() and ReactiveSources.unresponsiveMono()
 
         // Get the value from the Mono into a String variable but give up after 5 seconds
-        /*Optional<String> value = unresponsiveMono().blockOptional(Duration.ofSeconds(5));
-        System.out.println("Value from mono: " + value);*/
+        Optional<String> value = unresponsiveMono().blockOptional(Duration.ofSeconds(5));
+        System.out.println("Value from mono: " + value);
 
         //chatGPT
         unresponsiveMono()
@@ -28,7 +27,7 @@ public class Exercise6 {
 
         // Get the value from unresponsiveFlux into a String list but give up after 5 seconds
         // Come back and do this when you've learnt about operators!
-        //unresponsiveFlux();
+        //unresponsiveFlux();todo
 
         System.out.println("Press a key to end");
         System.in.read();

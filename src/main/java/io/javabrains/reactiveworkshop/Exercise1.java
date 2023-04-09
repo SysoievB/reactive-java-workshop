@@ -49,5 +49,4 @@ public class Exercise1 {
                 .forEach(System.out::println);
 
     }
-
 }

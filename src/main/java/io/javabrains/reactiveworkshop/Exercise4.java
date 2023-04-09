@@ -32,5 +32,4 @@ public class Exercise4 {
         System.out.println("Press a key to end");
         System.in.read();
     }
-
 }
